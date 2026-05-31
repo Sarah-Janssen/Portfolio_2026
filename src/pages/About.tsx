@@ -11,7 +11,7 @@ const About: React.FC = () => {
     <PageContainer>
       <Seo 
         title="Over mij | Sarah Janssen" 
-        description="Lees het verhaal van Sarah Janssen: van grafisch ontwerp naar functionele analyse en IT." 
+        description="Lees het verhaal van Sarah Janssen: van grafisch ontwerp naar Functional Analyst en AI Workflows. Ontdek hoe ik complexiteit omzet in structuur." 
       />
       
       {/* Introductie */}

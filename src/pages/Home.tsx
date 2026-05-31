@@ -22,7 +22,7 @@ const Home: React.FC = () => {
       <section className="container mx-auto px-4 py-20 md:py-32 flex justify-center">
         <div className="flex flex-col md:flex-row items-center gap-12 max-w-5xl">
           <div className="flex-1 order-2 md:order-1 text-center md:text-left">
-            <h1 className="text-sm font-bold uppercase tracking-widest text-portfolio-accent mb-4">Sarah Janssen</h1>
+            <p className="text-sm font-bold uppercase tracking-widest text-portfolio-accent mb-4">Sarah Janssen</p>
             <SectionHeading 
               title={"Complexiteit begrijpen.\nStructuur creëren.\nIdeeën realiseren."}
               level="h1"

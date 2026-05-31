@@ -74,22 +74,22 @@ export const projects: Project[] = [
       },
       {
         url: "/images/projects/unclutter-mind/screenshot-3.png",
-        caption: "Gecategoriseerde resultaten weergave.",
+        caption: "Van mentale chaos naar een eerste gestructureerd overzicht.",
         type: "screenshot"
       },
       {
         url: "/images/projects/unclutter-mind/screenshot-4.png",
-        caption: "Details van een specifieke categorie.",
+        caption: "Gestructureerde taken worden overzichtelijk gegroepeerd zodat actiepunten direct zichtbaar zijn.",
         type: "screenshot"
       },
       {
         url: "/images/projects/unclutter-mind/screenshot-5.png",
-        caption: "Instellingen en privacy configuratie.",
+        caption: "Niet alles is een taak: de applicatie onderscheidt ideeën, vragen en acties van elkaar.",
         type: "screenshot"
       },
       {
         url: "/images/projects/unclutter-mind/screenshot-6.png",
-        caption: "Mobiele weergave van de applicatie.",
+        caption: "Vorige sessies blijven bewaard waardoor evolutie en terugkerende patronen zichtbaar worden.",
         type: "screenshot"
       },
       {
@@ -146,7 +146,51 @@ export const projects: Project[] = [
       "Datavisualisatie",
       "International Collaboration"
     ],
-    images: [], // Placeholders for future screenshots
+    images: [],
+    audience: "both"
+  },
+  {
+    slug: "robocup-eindhoven",
+    title: "Meetup: RoboCup Eindhoven",
+    shortDescription: "Een inspirerende verkenning van de nieuwste ontwikkelingen op het vlak van robotica en artificiële intelligentie.",
+    category: "Leertraject",
+    challenge: "Het belang van continu bijleren buiten de dagelijkse werkomgeving en het begrijpen van hoe complexe systemen zoals robotica in de praktijk functioneren.",
+    approach: "Observatie van autonome robots tijdens voetbalwedstrijden gecombineerd met theoretische verdieping tijdens een AI-talk van Lieven Scheire over impact en ethiek.",
+    solution: "Een versterkt inzicht in de synergie tussen software, hardware en AI, en een hernieuwde motivatie om innovatieve technologieën vanuit zowel technisch als maatschappelijk oogpunt te benaderen.",
+    learnings: "Deze ervaring herinnerde me eraan dat technologie draait om samenwerking en creativiteit. Ik leerde hoe innovatie ontstaat door voortdurend te experimenteren en dat begrijpen altijd vóór implementeren komt.",
+    role: [
+      "Observatie & Analyse",
+      "Kennisverwerving",
+      "Netwerken"
+    ],
+    skills: [
+      "Technologische nieuwsgierigheid",
+      "AI-ethiek bewustzijn",
+      "Systeemdenken",
+      "Innovatiegerichtheid"
+    ],
+    stack: [
+      "Robotica",
+      "Artificiële Intelligentie",
+      "Innovatiemanagement",
+      "Ethische AI"
+    ],
+    highlights: [
+      "Nieuwsgierigheid naar opkomende technologieën.",
+      "Actief blijven leren buiten opleiding en werk.",
+      "Interesse in AI, robotica en innovatie.",
+      "Openstaan voor nieuwe inzichten en perspectieven.",
+      "Technologie bekijken vanuit technisch en maatschappelijk oogpunt."
+    ],
+    featured: true,
+    type: "concept",
+    themes: [
+      "Meetup",
+      "Robotica",
+      "AI",
+      "Continu Leren"
+    ],
+    images: [],
     audience: "both"
   }
 ]

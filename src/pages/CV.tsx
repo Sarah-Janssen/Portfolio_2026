@@ -72,7 +72,7 @@ const CV: React.FC = () => {
     <PageContainer>
       <Seo 
         title="Professioneel Overzicht | Sarah Janssen" 
-        description="Bekijk het professionele profiel, de ervaring en de expertise van Sarah Janssen." 
+        description="Bekijk het professionele profiel van Sarah Janssen: Functional Analyst gespecialiseerd in AI Workflows, functionele analyse en IT-oplossingen." 
       />
       
       <section className="container mx-auto px-4 py-20 md:py-32 flex justify-center">

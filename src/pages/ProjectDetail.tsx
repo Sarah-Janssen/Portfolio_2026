@@ -24,7 +24,7 @@ const ProjectDetail: React.FC = () => {
       />
       
       {/* 1. Hero / Intro */}
-      <section className="container mx-auto px-4 py-20 flex justify-center">
+      <section className="container mx-auto px-4 pt-20 pb-12 flex justify-center">
         <div className="max-w-4xl w-full">
           <Link to="/projects" className="text-portfolio-accent text-sm font-medium mb-8 inline-flex items-center hover:underline">
             <svg className="w-4 h-4 mr-1 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -47,11 +47,10 @@ const ProjectDetail: React.FC = () => {
         </div>
       </section>
 
-      {/* 2. Project Visuals (Nu bovenaan) */}
+      {/* 2. Project Visuals (Nu strakker aansluitend) */}
       {project.images && project.images.length > 0 && (
         <section className="container mx-auto px-4 pb-20">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-10 text-portfolio-text text-center">Visueel overzicht</h2>
             <ImageCarousel images={project.images} />
           </div>
         </section>
