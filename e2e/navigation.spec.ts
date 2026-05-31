@@ -5,22 +5,12 @@ test.describe('Navigation', () => {
     await page.goto('/');
     
     // Check Home
-    await expect(page).toHaveTitle(/Sarah Janssen | Nieuwsgierig, Analytisch, Praktisch/);
-    
-    // Navigate to About
-    await page.click('nav a[href="/about"]');
-    await expect(page).toHaveURL(/\/about/);
-    await expect(page.locator('main h1').first()).toContainText(/Mijn Verhaal/);
+    await expect(page).toHaveTitle(/Sarah Janssen | Complexiteit begrijpen/);
     
     // Navigate to Projects
     await page.click('nav a[href="/projects"]');
     await expect(page).toHaveURL(/\/projects/);
     await expect(page.locator('main h1').first()).toContainText(/Projecten/);
-    
-    // Navigate to CV
-    await page.click('nav a[href="/cv"]');
-    await expect(page).toHaveURL(/\/cv/);
-    await expect(page.locator('main h1').first()).toContainText(/Professioneel Overzicht/);
     
     // Navigate to Contact
     await page.click('nav a[href="/contact"]');

@@ -23,7 +23,7 @@ const ProjectDetail: React.FC = () => {
         description={project.shortDescription} 
       />
       
-      {/* 1. Hero / Intro */}
+      {/* 1. Intro */}
       <section className="container mx-auto px-4 pt-20 pb-12 flex justify-center animate-fade-in">
         <div className="max-w-4xl w-full">
           <Link to="/projects" className="text-portfolio-accent text-sm font-medium mb-8 inline-flex items-center hover:underline">
@@ -47,7 +47,7 @@ const ProjectDetail: React.FC = () => {
         </div>
       </section>
 
-      {/* 2. Project Visuals (Nu strakker aansluitend) */}
+      {/* 2. Visueel Overzicht */}
       {project.images && project.images.length > 0 && (
         <section className="container mx-auto px-4 pb-20">
           <div className="max-w-5xl mx-auto">
@@ -91,14 +91,14 @@ const ProjectDetail: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. Wat dit project toont & Leertraject */}
-      <section className="container mx-auto px-4 py-20 flex justify-center">
+      {/* 4. Wat dit toont & 5. Wat ik geleerd heb */}
+      <section className="container mx-auto px-4 py-20 flex justify-center border-b border-portfolio-accent/10">
         <div className="max-w-3xl w-full grid grid-cols-1 md:grid-cols-2 gap-16">
           {project.highlights && project.highlights.length > 0 && (
-            <div>
-              <h2 className="text-sm font-bold uppercase tracking-widest text-portfolio-accent/60 mb-8">Wat dit project toont</h2>
+            <div className="animate-slide-up">
+              <h2 className="text-sm font-bold uppercase tracking-widest text-portfolio-accent/60 mb-8">Wat dit toont</h2>
               <ul className="space-y-4 text-portfolio-text/80">
-                {project.highlights.map((highlight, idx) => (
+                {project.highlights.slice(0, 4).map((highlight, idx) => (
                   <li key={idx} className="flex items-start">
                     <span className="text-portfolio-accent mr-2 mt-1">✓</span>
                     <span>{highlight}</span>
@@ -107,7 +107,7 @@ const ProjectDetail: React.FC = () => {
               </ul>
             </div>
           )}
-          <div className={!project.highlights || project.highlights.length === 0 ? "md:col-span-2" : ""}>
+          <div className={`${(!project.highlights || project.highlights.length === 0) ? "md:col-span-2" : ""} animate-slide-up`}>
             <h2 className="text-sm font-bold uppercase tracking-widest text-portfolio-accent/60 mb-8">Wat ik geleerd heb</h2>
             <p className="text-portfolio-text/80 italic leading-relaxed border-l-4 border-portfolio-secondary/30 pl-6">
               {project.learnings}
@@ -116,7 +116,7 @@ const ProjectDetail: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. Speciale AI Sectie (indien van toepassing) */}
+      {/* Speciale AI Sectie (indien van toepassing) */}
       {project.slug === 'unclutter-mind' && (
         <HighlightSection title="AI & Privacy-First">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -178,10 +178,17 @@ const ProjectDetail: React.FC = () => {
             )}
           </div>
           
-          <div className="mt-20 text-center">
+          <div className="mt-20 text-center border-t border-portfolio-accent/10 pt-20 flex flex-col items-center gap-8">
             <Button to="/contact">
               Interesse in mijn aanpak? Neem contact op
             </Button>
+            
+            <Link to="/projects" className="text-portfolio-text/40 hover:text-portfolio-accent transition-colors text-sm font-medium flex items-center group">
+              <svg className="w-4 h-4 mr-2 rotate-180 transition-transform group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+              Terug naar overzicht
+            </Link>
           </div>
         </div>
       </section>

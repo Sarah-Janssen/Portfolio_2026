@@ -18,7 +18,7 @@ const Home: React.FC = () => {
         description="Portfolio van Sarah Janssen. Ik haal energie uit het begrijpen van complexe vraagstukken en het creëren van praktische oplossingen." 
       />
       
-      {/* V2.4 Hero Section */}
+      {/* 1. Hero Section */}
       <section className="container mx-auto px-4 py-20 md:py-32 flex justify-center animate-fade-in">
         <div className="flex flex-col md:flex-row items-center gap-12 max-w-5xl">
           <div className="flex-1 order-2 md:order-1 text-center md:text-left">
@@ -28,7 +28,7 @@ const Home: React.FC = () => {
               level="h1"
               className="!mb-6 whitespace-pre-line"
             />
-            <p className="text-xl text-portfolio-text/70 mb-10 leading-relaxed">
+            <p className="text-xl text-portfolio-text/70 mb-10 leading-relaxed max-w-2xl">
               Ik haal energie uit het begrijpen van complexe vraagstukken, 
               het creëren van structuur en het omzetten van ideeën in bruikbare oplossingen.
             </p>
@@ -38,16 +38,15 @@ const Home: React.FC = () => {
             </div>
           </div>
           <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-portfolio-accent/10 border-4 border-white shadow-lg overflow-hidden order-1 md:order-2 flex-shrink-0">
-            {/* Placeholder for professional photo */}
-            <div className="w-full h-full flex items-center justify-center text-portfolio-accent/40 font-bold italic">
+            <div className="w-full h-full flex items-center justify-center text-portfolio-accent/40 font-bold italic text-center px-4">
               Profielfoto
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mijn Aanpak (ProcessFlow) */}
-      <section className="bg-portfolio-accent/5 py-20 md:py-32">
+      {/* 2. Mijn Aanpak (ProcessFlow) */}
+      <section className="bg-portfolio-accent/5 py-20 md:py-32 animate-slide-up">
         <div className="container mx-auto px-4">
           <SectionHeading 
             title="Mijn Aanpak" 
@@ -58,8 +57,8 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Interessegebieden (V2.4 Action-oriented) */}
-      <section className="bg-portfolio-text text-white py-20 md:py-32">
+      {/* 3. Focusgebieden */}
+      <section className="bg-portfolio-text text-white py-20 md:py-32 animate-slide-up">
         <div className="container mx-auto px-4">
           <SectionHeading 
             title="Focus & Expertise" 
@@ -87,30 +86,33 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Uitgelichte projecten */}
-      <section className="container mx-auto px-4 py-20 md:py-32">
+      {/* 4. Uitgelichte projecten */}
+      <section className="container mx-auto px-4 py-20 md:py-32 animate-slide-up">
         <SectionHeading 
           title="Uitgelichte projecten" 
           subtitle="Een selectie van oplossingen die mijn manier van werken illustreren."
+          centered
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {featuredProjects.map(project => (
             <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
-        <div className="mt-12 text-center md:text-left">
-          <Button to="/projects" variant="outline">Bekijk alle projecten</Button>
+        <div className="mt-16 text-center">
+          <Button to="/projects" variant="outline">Bekijk alle projecten & ervaringen</Button>
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="container mx-auto px-4 py-20 md:py-32 text-center">
-        <h2 className="text-3xl font-bold mb-6 text-portfolio-text">Klaar om iets te bouwen of te structureren?</h2>
-        <p className="text-lg text-portfolio-text/60 mb-10 max-w-2xl mx-auto">
-          Of je nu een werkgever bent, een freelance opdracht hebt, of gewoon van gedachten wilt wisselen: 
-          mijn deur staat open voor analytische uitdagingen.
-        </p>
-        <Button to="/contact">Neem contact op</Button>
+      {/* 5. Contact CTA */}
+      <section className="bg-portfolio-text text-white py-20 md:py-32 text-center animate-fade-in">
+        <div className="container mx-auto px-4 max-w-2xl">
+          <h2 className="text-3xl font-bold mb-6">Klaar om iets te bouwen of te structureren?</h2>
+          <p className="text-lg text-white/60 mb-10 leading-relaxed">
+            Of je nu een werkgever bent, een partner, of een uitdagend project hebt: 
+            mijn deur staat open voor analytische vraagstukken.
+          </p>
+          <Button to="/contact">Neem contact op</Button>
+        </div>
       </section>
     </PageContainer>
   );

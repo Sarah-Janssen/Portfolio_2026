@@ -65,12 +65,12 @@ export const projects: Project[] = [
     images: [
       {
         url: "/images/projects/unclutter-mind/screenshot-1.png",
-        caption: "Dashboard overzicht van Unclutter Mind.",
+        caption: "Centraal overzicht dat mentale rust biedt door gedachten direct te structureren.",
         type: "screenshot"
       },
       {
         url: "/images/projects/unclutter-mind/screenshot-2.png",
-        caption: "Invoer van ongestructureerde gedachten.",
+        caption: "Vrije invoerruimte waar gebruikers zonder barrières hun gedachten kunnen ontladen.",
         type: "screenshot"
       },
       {
@@ -95,7 +95,7 @@ export const projects: Project[] = [
       },
       {
         url: "/images/projects/unclutter-mind/screenshot-7.png",
-        caption: "Technische flow en categorisatielogica.",
+        caption: "Architecturale blauwdruk die de hybride AI- en rule-based categorisatie visualiseert.",
         type: "diagram"
       }
     ]
@@ -153,7 +153,7 @@ export const projects: Project[] = [
   },
   {
     slug: "robocup-eindhoven",
-    title: "Meetup: RoboCup Eindhoven",
+    title: "Evenement: RoboCup Eindhoven",
     shortDescription: "Een inspirerende verkenning van de nieuwste ontwikkelingen op het vlak van robotica en artificiële intelligentie.",
     category: "Leertraject",
     filterCategory: "Meetup",
@@ -196,7 +196,7 @@ export const projects: Project[] = [
       "Innovatiemanagement",
       "Ethische AI"
     ],
-    footerTitle: "Inzichten",
+    footerTitle: "Belangrijke inzichten",
     customDetails: [
       {
         title: "Mijn focus",

@@ -6,7 +6,6 @@ const Header: React.FC = () => {
     { name: 'Home', path: '/' },
     { name: 'Over mij', path: '/about' },
     { name: 'Projecten', path: '/projects' },
-    { name: 'Overzicht', path: '/cv' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -16,14 +15,14 @@ const Header: React.FC = () => {
         <NavLink to="/" className="text-xl font-bold text-portfolio-accent">
           Sarah Janssen
         </NavLink>
-        <ul className="flex space-x-6">
+        <ul className="flex space-x-8">
           {navItems.map((item) => (
             <li key={item.path}>
               <NavLink
                 to={item.path}
                 className={({ isActive }) =>
-                  `text-sm font-medium transition-colors hover:text-portfolio-accent ${
-                    isActive ? 'text-portfolio-accent underline underline-offset-4' : 'text-portfolio-text/70'
+                  `text-sm font-bold tracking-wide transition-all hover:text-portfolio-accent ${
+                    isActive ? 'text-portfolio-accent relative after:content-[""] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-portfolio-accent' : 'text-portfolio-text/60'
                   }`
                 }
               >

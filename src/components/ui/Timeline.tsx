@@ -3,6 +3,7 @@ import React from 'react';
 interface TimelineItem {
   period: string;
   title: string;
+  subtitle?: string;
   description: string;
   tags?: string[];
 }
@@ -16,28 +17,33 @@ const items: TimelineItem[] = [
   {
     period: 'Vroegere Ervaring',
     title: 'Retail & Organisatie',
+    subtitle: '2009 – 2022',
     description: 'Focus op klantgericht werken, verantwoordelijkheid en procesmatig organiseren.',
   },
   {
     period: 'Structuur',
     title: 'Medische Administratie',
+    subtitle: '2009 – 2022',
     description: 'Ervaring opbouwen in een strikt gestructureerde en nauwkeurige omgeving.',
   },
   {
     period: 'De Switch',
     title: 'Omscholing naar IT',
+    subtitle: '2023 – 2025',
     description: 'De bewuste keuze om mijn analytische vaardigheden technisch te onderbouwen.',
   },
   {
     period: 'Portugal (Erasmus)',
     title: 'Water Data Platform',
+    subtitle: '2025',
     description: 'Mijn eerste grote IT-project: Django, PostgreSQL en Grafana in een internationale setting.',
     tags: ['Django', 'PostgreSQL', 'Docker', 'Grafana']
   },
   {
     period: 'Heden',
-    title: 'Functioneel Analist',
-    description: 'Blijvend groeien, bouwen en structureren op het snijvlak van mens en technologie.',
+    title: 'ICT-Consultant / Functioneel Analist',
+    subtitle: '2026 – heden',
+    description: 'Eerste professionele IT-rol waarin analyse, samenwerking en continue groei samenkomen.',
   }
 ];
 
@@ -50,8 +56,11 @@ const Timeline: React.FC = () => {
           <span className="text-xs font-bold uppercase tracking-widest text-portfolio-accent/60 mb-1 block">
             {item.period}
           </span>
-          <h3 className="text-xl font-bold text-portfolio-text mb-2">{item.title}</h3>
-          <p className="text-portfolio-text/70 leading-relaxed max-w-2xl">
+          <h3 className="text-xl font-bold text-portfolio-text">{item.title}</h3>
+          {item.subtitle && (
+            <p className="text-sm font-medium text-portfolio-text/40 mb-2">{item.subtitle}</p>
+          )}
+          <p className="text-portfolio-text/70 leading-relaxed max-w-2xl mt-2">
             {item.description}
           </p>
           {item.tags && (

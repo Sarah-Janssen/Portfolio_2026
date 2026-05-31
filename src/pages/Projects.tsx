@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
                   : 'bg-white text-portfolio-text/60 border-portfolio-accent/10 hover:border-portfolio-accent/30'
               }`}
             >
-              {filter === 'Alles' ? 'Alles tonen' : `${filter}en`}
+              {filter === 'Alles' ? 'Alles tonen' : filter === 'Meetup' ? 'Evenementen' : `${filter}en`}
             </button>
           ))}
         </div>
