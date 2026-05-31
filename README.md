@@ -1,47 +1,49 @@
-# Sarah Janssen Portfolio - V1 (Local-First)
+# Sarah Janssen — Portfolio V2.2
 
-Dit is de lokale portfolio van Sarah Janssen, ontworpen om haar te positioneren als **Functional Analyst / Application Specialist** met een sterke focus op structuur en praktische AI-toepassingen.
+> **Complexiteit begrijpen. Structuur creëren. Ideeën realiseren.**
 
-## 🚀 Technologieën
+Dit is de professionele portfolio van Sarah Janssen. Waar V1 focuste op functietitels, draait V2 volledig om de persoon achter het werk: hoe ik denk, hoe ik leer en hoe ik complexe vraagstukken omzet in praktische digitale oplossingen.
 
-- **Frontend:** React, TypeScript, Vite
-- **Styling:** Tailwind CSS
-- **Navigatie:** React Router
-- **SEO:** React Helmet Async
-- **Data:** Type-safe JSON/Object-gebaseerde data-laag (DDD-geïnspireerd)
+## 🌟 Visie & Positionering
 
-## 📁 Projectstructuur
+Ik zie mezelf als een nieuwsgierige professional met een sterke analytische basis. Of het nu gaat om functionele analyse, softwareontwikkeling of AI-ondersteunde workflows: de kern van mijn werk is altijd het brengen van structuur in chaos.
 
-- `src/components/ui`: Herbruikbare atomische componenten (Tags, Buttons, Sections).
-- `src/components/layout`: Globale layout componenten (Header, Footer, PageContainer).
-- `src/data`: "Single Source of Truth" voor projecten en profielinformatie.
-- `src/pages`: Paginacomponenten (Home, About, Projects, ProjectDetail, CV, Contact).
-- `src/types`: TypeScript interfaces voor domeinmodellen.
+### Mijn Aanpak
+1.  **Begrijpen:** De essentie van het probleem doorgronden.
+2.  **Structureren:** Heldere kaders en logische verbanden leggen.
+3.  **Vereenvoudigen:** Overbodige complexiteit verwijderen.
+4.  **Realiseren:** Ideeën vertalen naar werkende oplossingen.
+5.  **Verbeteren:** Blijven leren en optimaliseren.
 
-## 🛠 Lokale Ontwikkeling
+## 🧠 Uitgelichte Projecten
 
-1.  **Installatie:**
-    ```bash
-    npm install
-    ```
+- **Unclutter Mind:** Een privacy-first MVP die mentale ruis omzet in rust via lokale AI-categorisatie (Ollama). Toont mijn expertise in AI-ondersteunde workflows en product-denken.
+- **Water Data Platform:** Een internationaal project (Erasmusstage Portugal) waarbij complexe watergegevens werden getransformeerd naar interactieve dashboards via Django en Grafana.
 
-2.  **Start Dev Server:**
-    ```bash
-    npm run dev
-    ```
+## 🛠 Technisch Fundament
 
-3.  **Productie Build:**
-    ```bash
-    npm run build
-    ```
+Dit project is gebouwd volgens de **Clean Code** en **DDD-principes** van de VorstersNV Fleet:
+- **Frontend:** React + TypeScript + Vite
+- **Styling:** Tailwind CSS (Analytisch kleurenpalet)
+- **Architectuur:** Absolute imports (`@/`), component atomiciteit en een type-safe data-laag.
+- **Validatie:** Unit tests via Vitest en End-to-End validatie via Playwright.
 
-## 🧠 Kernproject: Unclutter Mind
+## 🚀 Lokale Ontwikkeling
 
-Dit project staat centraal in de portfolio en toont Sarah's vermogen om:
-- Complexe problemen te vertalen naar een MVP.
-- De scope te bewaken met een "Privacy-first" aanpak.
-- AI (lokaal via Ollama) praktisch en gecontroleerd in te zetten.
-- Informatie te structureren in heldere functionele categorieën.
+```bash
+# Installatie
+npm install
+
+# Start development server
+npm run dev
+
+# Tests draaien
+npm test
+npx playwright test
+
+# Productie build
+npm run build
+```
 
 ---
-*Gerealiseerd door de VorstersNV Fleet Architect & Developer agents (Mei 2026).*
+*Gerealiseerd door de VorstersNV Fleet — Mei 2026.*

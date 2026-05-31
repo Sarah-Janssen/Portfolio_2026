@@ -84,23 +84,20 @@ const ProjectDetail: React.FC = () => {
       {/* 4. Wat dit project toont & Leertraject */}
       <section className="container mx-auto px-4 py-20 flex justify-center">
         <div className="max-w-3xl w-full grid grid-cols-1 md:grid-cols-2 gap-16">
-          <div>
-            <h2 className="text-sm font-bold uppercase tracking-widest text-portfolio-accent/60 mb-8">Wat dit project toont</h2>
-            <ul className="space-y-4 text-portfolio-text/80">
-              {(project.highlights || [
-                "Abstracte problemen vertalen naar een concrete oplossing.",
-                "Bewaken van scope en eenvoud binnen een MVP.",
-                "Kritisch denken over privacy, UX en AI.",
-                "Combineren van analyse, structuur en technologie."
-              ]).map((highlight, idx) => (
-                <li key={idx} className="flex items-start">
-                  <span className="text-portfolio-accent mr-2 mt-1">✓</span>
-                  <span>{highlight}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
+          {project.highlights && project.highlights.length > 0 && (
+            <div>
+              <h2 className="text-sm font-bold uppercase tracking-widest text-portfolio-accent/60 mb-8">Wat dit project toont</h2>
+              <ul className="space-y-4 text-portfolio-text/80">
+                {project.highlights.map((highlight, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <span className="text-portfolio-accent mr-2 mt-1">✓</span>
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          <div className={!project.highlights || project.highlights.length === 0 ? "md:col-span-2" : ""}>
             <h2 className="text-sm font-bold uppercase tracking-widest text-portfolio-accent/60 mb-8">Wat ik geleerd heb</h2>
             <p className="text-portfolio-text/80 italic leading-relaxed border-l-4 border-portfolio-secondary/30 pl-6">
               {project.learnings}

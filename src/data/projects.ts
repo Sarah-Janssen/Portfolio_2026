@@ -102,23 +102,51 @@ export const projects: Project[] = [
   {
     slug: "waterdata-platform",
     title: "Water Data Platform",
-    shortDescription: "Ontwikkeling van een dashboard voor het visualiseren van waterkwaliteit en verbruik in Portugal.",
+    shortDescription: "Tijdens mijn Erasmusstage in Beja (Portugal) werkte ik mee aan de ontwikkeling van een watermonitoringplatform.",
     category: "Software & Applicaties",
-    challenge: "Complexe data van verschillende sensoren begrijpelijk maken voor eindgebruikers.",
-    approach: "Gebruik van Django en PostgreSQL voor de backend, en Grafana voor de visualisatielaag.",
-    solution: "Een gecentraliseerd platform waar data in real-time wordt getoond via overzichtelijke dashboards.",
-    learnings: "Ervaring met internationale samenwerking en het werken met real-time data sensoren.",
-    role: ["Full-stack development", "Data visualisatie"],
-    skills: ["Python", "SQL", "Docker"],
-    stack: ["Django", "PostgreSQL", "Grafana", "Docker"],
+    challenge: "De organisatie beschikte over verschillende watergerelateerde gegevens, maar had nood aan een centrale oplossing om deze informatie overzichtelijk te raadplegen en te analyseren. De uitdaging lag in het vertalen van gebruikersbehoeften naar een bruikbare toepassing.",
+    approach: "Ik startte met het analyseren van bestaande processen en gebruikersfeedback. Op basis daarvan werkte ik functionele flows uit en vertaalde ik de informatie naar een gestructureerd datamodel en een gebruiksvriendelijke applicatie met een iteratief ontwikkelproces.",
+    solution: "Het resultaat was een webplatform waarmee watergegevens konden worden opgehaald, verwerkt en gevisualiseerd via interactieve dashboards, waardoor gebruikers sneller inzicht kregen.",
+    learnings: "Deze stage leerde me hoe belangrijk communicatie met gebruikers is, hoe analyse en ontwikkeling elkaar versterken en gaf me het vertrouwen om in een internationale omgeving multidisciplinaire uitdagingen aan te gaan.",
+    role: [
+      "Analyse van gebruikersbehoeften",
+      "Functionele uitwerking",
+      "Datamodellering",
+      "Dashboardontwerp",
+      "Documentatie",
+      "Validatie met stakeholders"
+    ],
+    skills: [
+      "Requirementsanalyse",
+      "Probleemanalyse",
+      "Informatie structureren",
+      "Datavisualisatie",
+      "Stakeholdercommunicatie",
+      "Iteratief werken"
+    ],
+    stack: [
+      "Django",
+      "PostgreSQL",
+      "Docker",
+      "Grafana",
+      "Python"
+    ],
     highlights: [
-      "Real-time data visualisatie van complexe sensoren.",
-      "Gebruikersvriendelijke dashboards voor technische data.",
-      "Schaalbare architectuur voor groeiende datasets.",
-      "Internationale samenwerking en afstemming."
+      "Vertalen van gebruikersnoden naar digitale oplossingen.",
+      "Functionele analyse combineren met technische realisatie.",
+      "Structuur brengen in complexe informatie.",
+      "Werken in een internationale en multidisciplinaire omgeving.",
+      "Iteratief verbeteren op basis van feedback."
     ],
     featured: true,
     type: "case-study",
-    themes: ["Data Visualisation", "Real-time Data"]
+    themes: [
+      "Erasmusstage",
+      "Portugal",
+      "Datavisualisatie",
+      "International Collaboration"
+    ],
+    images: [], // Placeholders for future screenshots
+    audience: "both"
   }
 ]
