@@ -157,6 +157,24 @@ export const projects: Project[] = [
     challenge: "Het belang van continu bijleren buiten de dagelijkse werkomgeving en het begrijpen van hoe complexe systemen zoals robotica in de praktijk functioneren.",
     approach: "Observatie van autonome robots tijdens voetbalwedstrijden gecombineerd met theoretische verdieping tijdens een AI-talk van Lieven Scheire over impact en ethiek.",
     solution: "Een versterkt inzicht in de synergie tussen software, hardware en AI, en een hernieuwde motivatie om innovatieve technologieën vanuit zowel technisch als maatschappelijk oogpunt te benaderen.",
+    storySections: [
+      {
+        title: "De aanleiding",
+        content: "Ik vind het belangrijk om ook buiten mijn dagelijkse werk nieuwe technologieën te blijven ontdekken. RoboCup Eindhoven bood een unieke kans om de nieuwste ontwikkelingen op het vlak van robotica en artificiële intelligentie van dichtbij te ervaren. Het evenement bracht onderzoekers, technologiebedrijven, studenten en geïnteresseerden samen rond één gemeenschappelijke passie: innovatie."
+      },
+      {
+        title: "Wat ik heb gezien",
+        content: "Een van de meest indrukwekkende onderdelen van RoboCup waren de robotvoetbalwedstrijden. Autonome robots namen het tegen elkaar op in teams, waarbij ze zelfstandig moesten navigeren, samenwerken en beslissingen nemen tijdens de wedstrijd. Het was fascinerend om te zien hoe software, hardware en artificiële intelligentie samenkomen in één werkend systeem."
+      },
+      {
+        title: "AI in de praktijk",
+        content: "Tijdens het evenement woonde ik ook een AI-talk bij van Lieven Scheire. Hij sprak over de impact van artificiële intelligentie op ons dagelijks leven, de mogelijkheden die deze technologie biedt en de ethische vragen die ermee gepaard gaan. De lezing gaf een realistisch beeld van zowel de kansen als de verantwoordelijkheden die ontstaan wanneer AI een steeds grotere rol krijgt binnen onze samenleving."
+      },
+      {
+        title: "Waarom dit mij inspireerde",
+        content: "Wat mij vooral aansprak aan RoboCup was de combinatie van verschillende disciplines. Robotica brengt softwareontwikkeling, artificiële intelligentie, elektronica, data en samenwerking samen in één geheel. Het liet zien hoe complexe systemen stap voor stap worden opgebouwd en hoe innovatie ontstaat door voortdurend te experimenteren en bij te leren."
+      }
+    ],
     learnings: "Deze ervaring herinnerde me eraan dat technologie draait om samenwerking en creativiteit. Ik leerde hoe innovatie ontstaat door voortdurend te experimenteren en dat begrijpen altijd vóór implementeren komt.",
     role: [
       "Observatie & Analyse",
@@ -174,6 +192,36 @@ export const projects: Project[] = [
       "Artificiële Intelligentie",
       "Innovatiemanagement",
       "Ethische AI"
+    ],
+    footerTitle: "Belangrijke inzichten",
+    customDetails: [
+      {
+        title: "Mijn focus",
+        items: [
+          "Robotica",
+          "Artificiële intelligentie",
+          "Innovatie",
+          "Systeemgedrag"
+        ]
+      },
+      {
+        title: "Wat mij inspireerde",
+        items: [
+          "Robotvoetbalwedstrijden",
+          "Real-time samenwerking tussen robots",
+          "AI-talk van Lieven Scheire",
+          "Ethische vraagstukken rond AI"
+        ]
+      },
+      {
+        title: "Belangrijkste inzichten",
+        items: [
+          "Technologie ontstaat uit samenwerking tussen disciplines",
+          "AI vraagt ook ethische reflectie",
+          "Innovatie ontstaat door experimenteren",
+          "Praktische toepassingen maken technologie tastbaar"
+        ]
+      }
     ],
     highlights: [
       "Nieuwsgierigheid naar opkomende technologieën.",

@@ -62,20 +62,31 @@ const ProjectDetail: React.FC = () => {
           <h2 className="text-3xl font-bold mb-12 text-portfolio-text text-center">Projectverhaal</h2>
           
           <div className="space-y-12">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Uitdaging</h3>
-              <p>{project.challenge}</p>
-            </div>
+            {project.storySections ? (
+              project.storySections.map((section, idx) => (
+                <div key={idx}>
+                  <h3 className="text-xl font-bold mb-4">{section.title}</h3>
+                  <p>{section.content}</p>
+                </div>
+              ))
+            ) : (
+              <>
+                <div>
+                  <h3 className="text-xl font-bold mb-4">Uitdaging</h3>
+                  <p>{project.challenge}</p>
+                </div>
 
-            <div>
-              <h3 className="text-xl font-bold mb-4">Aanpak</h3>
-              <p>{project.approach}</p>
-            </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-4">Aanpak</h3>
+                  <p>{project.approach}</p>
+                </div>
 
-            <div>
-              <h3 className="text-xl font-bold mb-4">Oplossing</h3>
-              <p>{project.solution}</p>
-            </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-4">Oplossing</h3>
+                  <p>{project.solution}</p>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </section>
@@ -130,26 +141,41 @@ const ProjectDetail: React.FC = () => {
       {/* 6. Subtiele Technische Details (Onderaan) */}
       <section className="container mx-auto px-4 py-20 border-t border-portfolio-accent/10 flex justify-center bg-portfolio-bg">
         <div className="max-w-4xl w-full">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-portfolio-accent/60 mb-12 text-center">Technische details</h2>
+          <h2 className="text-sm font-bold uppercase tracking-widest text-portfolio-accent/60 mb-12 text-center">
+            {project.footerTitle || "Technische details"}
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-sm">
-            <div>
-              <h3 className="font-bold text-portfolio-text mb-4 uppercase tracking-wider text-xs">Mijn Rol</h3>
-              <p className="text-portfolio-text/60 leading-relaxed italic">
-                {project.role.join(' · ')}
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold text-portfolio-text mb-4 uppercase tracking-wider text-xs">Skills</h3>
-              <p className="text-portfolio-text/60 leading-relaxed italic">
-                {project.skills.join(' · ')}
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold text-portfolio-text mb-4 uppercase tracking-wider text-xs">Stack</h3>
-              <p className="text-portfolio-text/60 leading-relaxed italic">
-                {project.stack.join(' · ')}
-              </p>
-            </div>
+            {project.customDetails ? (
+              project.customDetails.map((detail, idx) => (
+                <div key={idx}>
+                  <h3 className="font-bold text-portfolio-text mb-4 uppercase tracking-wider text-xs">{detail.title}</h3>
+                  <ul className="space-y-2 text-portfolio-text/60 leading-relaxed italic">
+                    {detail.items.map((item, i) => <li key={i}>{item}</li>)}
+                  </ul>
+                </div>
+              ))
+            ) : (
+              <>
+                <div>
+                  <h3 className="font-bold text-portfolio-text mb-4 uppercase tracking-wider text-xs">Mijn Rol</h3>
+                  <p className="text-portfolio-text/60 leading-relaxed italic">
+                    {project.role.join(' · ')}
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-bold text-portfolio-text mb-4 uppercase tracking-wider text-xs">Skills</h3>
+                  <p className="text-portfolio-text/60 leading-relaxed italic">
+                    {project.skills.join(' · ')}
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-bold text-portfolio-text mb-4 uppercase tracking-wider text-xs">Stack</h3>
+                  <p className="text-portfolio-text/60 leading-relaxed italic">
+                    {project.stack.join(' · ')}
+                  </p>
+                </div>
+              </>
+            )}
           </div>
           
           <div className="mt-20 text-center">
