@@ -14,15 +14,15 @@ const Home: React.FC = () => {
   return (
     <PageContainer>
       <Seo 
-        title="Sarah Janssen | Nieuwsgierig, Analytisch, Praktisch" 
+        title="Sarah Janssen | Complexiteit begrijpen. Structuur creëren. Ideeën realiseren." 
         description="Portfolio van Sarah Janssen. Ik haal energie uit het begrijpen van complexe vraagstukken en het creëren van praktische oplossingen." 
       />
       
-      {/* V2 Hero Section */}
-      <section className="container mx-auto px-4 py-20 md:py-32 flex justify-center">
+      {/* V2.4 Hero Section */}
+      <section className="container mx-auto px-4 py-20 md:py-32 flex justify-center animate-fade-in">
         <div className="flex flex-col md:flex-row items-center gap-12 max-w-5xl">
           <div className="flex-1 order-2 md:order-1 text-center md:text-left">
-            <p className="text-sm font-bold uppercase tracking-widest text-portfolio-accent mb-4">Sarah Janssen</p>
+            <h1 className="text-sm font-bold uppercase tracking-widest text-portfolio-accent mb-4">Sarah Janssen</h1>
             <SectionHeading 
               title={"Complexiteit begrijpen.\nStructuur creëren.\nIdeeën realiseren."}
               level="h1"
@@ -58,7 +58,36 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured Projects */}
+      {/* Interessegebieden (V2.4 Action-oriented) */}
+      <section className="bg-portfolio-text text-white py-20 md:py-32">
+        <div className="container mx-auto px-4">
+          <SectionHeading 
+            title="Focus & Expertise" 
+            subtitle="Mijn manier van kijken en werken."
+            className="[&_h2]:text-white [&_p]:text-white/60"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <InterestCard 
+              title="Complexiteit Begrijpen" 
+              description="Ik haal energie uit het analyseren van vraagstukken en het ontdekken van patronen."
+            />
+            <InterestCard 
+              title="Structuur Creëren" 
+              description="Ik vertaal informatie naar duidelijke processen, documentatie en werkbare oplossingen."
+            />
+            <InterestCard 
+              title="Technologie Verkennen" 
+              description="Ik onderzoek hoe software, AI en digitale tools mensen kunnen ondersteunen."
+            />
+            <InterestCard 
+              title="Blijven Groeien" 
+              description="Nieuwe technologieën, projecten en ervaringen zie ik als kansen om bij te leren."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Uitgelichte projecten */}
       <section className="container mx-auto px-4 py-20 md:py-32">
         <SectionHeading 
           title="Uitgelichte projecten" 
@@ -74,38 +103,9 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Interessegebieden */}
-      <section className="bg-portfolio-text text-white py-20 md:py-32">
-        <div className="container mx-auto px-4">
-          <SectionHeading 
-            title="Interessegebieden" 
-            subtitle="Waar ik mijn tanden graag in zet."
-            className="[&_h2]:text-white [&_p]:text-white/60"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <InterestCard 
-              title="Analyse & Structuur" 
-              description="Procesanalyse, requirements, en het documenteren van de kern van de zaak."
-            />
-            <InterestCard 
-              title="Software & Apps" 
-              description="Ideeën omzetten naar bruikbare digitale oplossingen door analyse, technologie en AI slim te combineren."
-            />
-            <InterestCard 
-              title="AI & Automatisatie" 
-              description="AI-workflows en automatisatie inzetten als slimme productiviteitspartners."
-            />
-            <InterestCard 
-              title="Continu Leren" 
-              description="Blijvend groeien, nieuwe technieken doorgronden en mezelf uitdagen."
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Contact CTA */}
       <section className="container mx-auto px-4 py-20 md:py-32 text-center">
-        <h2 className="text-3xl font-bold mb-6">Klaar om iets te bouwen of te structureren?</h2>
+        <h2 className="text-3xl font-bold mb-6 text-portfolio-text">Klaar om iets te bouwen of te structureren?</h2>
         <p className="text-lg text-portfolio-text/60 mb-10 max-w-2xl mx-auto">
           Of je nu een werkgever bent, een freelance opdracht hebt, of gewoon van gedachten wilt wisselen: 
           mijn deur staat open voor analytische uitdagingen.

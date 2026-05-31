@@ -18,24 +18,39 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  const currentMedia = images[currentIndex];
+
   return (
     <div className="py-12 border-t border-portfolio-accent/10 mt-12">
       <div className="relative group max-w-5xl mx-auto overflow-hidden rounded-xl bg-portfolio-accent/5 border border-portfolio-accent/10 shadow-lg">
-        {/* Main Image */}
+        {/* Main Media Container */}
         <div className="aspect-video relative flex items-center justify-center bg-black/5">
-          <img 
-            src={images[currentIndex].url} 
-            alt={images[currentIndex].caption}
-            loading="lazy"
-            className="max-h-full max-w-full object-contain transition-opacity duration-300"
-          />
+          {currentMedia.type === 'video' ? (
+            <video 
+              key={currentMedia.url}
+              src={currentMedia.url} 
+              controls 
+              autoPlay
+              muted
+              className="max-h-full max-w-full object-contain"
+            >
+              Je browser ondersteunt de video tag niet.
+            </video>
+          ) : (
+            <img 
+              src={currentMedia.url} 
+              alt={currentMedia.caption}
+              loading="lazy"
+              className="max-h-full max-w-full object-contain transition-opacity duration-300"
+            />
+          )}
           
           {/* Navigation Arrows */}
           {images.length > 1 && (
             <>
               <button 
                 onClick={goToPrev}
-                className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 text-portfolio-text shadow-md hover:bg-white transition-colors"
+                className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 text-portfolio-text shadow-md hover:bg-white transition-colors z-10"
                 aria-label="Vorige afbeelding"
               >
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -44,7 +59,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
               </button>
               <button 
                 onClick={goToNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 text-portfolio-text shadow-md hover:bg-white transition-colors"
+                className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 text-portfolio-text shadow-md hover:bg-white transition-colors z-10"
                 aria-label="Volgende afbeelding"
               >
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -58,8 +73,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
         {/* Caption Bar */}
         <div className="p-4 bg-white border-t border-portfolio-accent/10 flex justify-between items-center">
           <p className="text-sm text-portfolio-text/80 italic">
-            <span className="font-bold mr-2">[{images[currentIndex].type.toUpperCase()}]</span>
-            {images[currentIndex].caption}
+            <span className="font-bold mr-2">[{currentMedia.type.toUpperCase()}]</span>
+            {currentMedia.caption}
           </p>
           <span className="text-xs font-mono text-portfolio-text/40">
             {currentIndex + 1} / {images.length}
@@ -67,18 +82,26 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
         </div>
       </div>
 
-      {/* Thumbnails (optional but good for accessibility) */}
+      {/* Thumbnails */}
       <div className="flex justify-center gap-2 mt-6 overflow-x-auto pb-2 px-4">
         {images.map((img, idx) => (
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
-            className={`w-16 h-12 rounded overflow-hidden border-2 transition-all ${
+            className={`w-16 h-12 rounded overflow-hidden border-2 transition-all flex-shrink-0 ${
               idx === currentIndex ? 'border-portfolio-accent shadow-sm scale-110' : 'border-transparent opacity-60 hover:opacity-100'
             }`}
-            aria-label={`Ga naar afbeelding ${idx + 1}: ${img.caption}`}
+            aria-label={`Ga naar ${img.type === 'video' ? 'video' : 'afbeelding'} ${idx + 1}: ${img.caption}`}
           >
-            <img src={img.url} alt="" className="w-full h-full object-cover" aria-hidden="true" />
+            {img.type === 'video' ? (
+              <div className="w-full h-full bg-portfolio-accent/20 flex items-center justify-center">
+                <svg className="w-6 h-6 text-portfolio-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            ) : (
+              <img src={img.url} alt="" className="w-full h-full object-cover" aria-hidden="true" />
+            )}
           </button>
         ))}
       </div>

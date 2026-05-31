@@ -2,20 +2,18 @@ import React from 'react';
 import PageContainer from '@/components/layout/PageContainer';
 import Seo from '@/components/seo/Seo';
 import SectionHeading from '@/components/ui/SectionHeading';
-import HighlightSection from '@/components/ui/HighlightSection';
 import Timeline from '@/components/ui/Timeline';
-import InterestCard from '@/components/ui/InterestCard';
 
 const About: React.FC = () => {
   return (
     <PageContainer>
       <Seo 
         title="Over mij | Sarah Janssen" 
-        description="Lees het verhaal van Sarah Janssen: van grafisch ontwerp naar Functional Analyst en AI Workflows. Ontdek hoe ik complexiteit omzet in structuur." 
+        description="Lees het verhaal van Sarah Janssen: van grafisch ontwerp naar functionele analyse en IT." 
       />
       
       {/* Introductie */}
-      <section className="container mx-auto px-4 py-20 md:py-32 flex justify-center">
+      <section className="container mx-auto px-4 py-20 md:py-32 flex justify-center animate-fade-in">
         <div className="max-w-3xl text-center">
           <SectionHeading 
             title="Mijn Verhaal" 
@@ -55,64 +53,33 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Waarden & Filosofie */}
-      <section className="container mx-auto px-4 py-20 md:py-32">
-        <SectionHeading 
-          title="Waar ik in geloof" 
-          subtitle="De principes die mijn werk en keuzes sturen."
-          centered
-        />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <InterestCard 
-            title="Nieuwsgierigheid" 
-            description="Ik wil altijd weten waarom iets werkt, niet alleen dat het werkt."
-          />
-          <InterestCard 
-            title="Eenvoud" 
-            description="De beste oplossingen zijn vaak de meest eenvoudige, ontdaan van overbodige ruis."
-          />
-          <InterestCard 
-            title="Menselijke Maat" 
-            description="Technologie moet mensen ondersteunen, nooit de controle overnemen."
-          />
+      {/* Wat mij motiveert */}
+      <section className="container mx-auto px-4 py-20 md:py-32 flex justify-center">
+        <div className="max-w-3xl">
+          <h2 className="text-3xl font-bold mb-8 text-portfolio-text text-center">Wat mij motiveert</h2>
+          <p className="text-lg text-portfolio-text/70 leading-relaxed text-center">
+            Ik haal voldoening uit het brengen van rust en overzicht. Of dat nu is door een 
+            complex bedrijfsproces in kaart te brengen, een database te optimaliseren of 
+            een intuïtieve gebruikersflow te ontwerpen: het resultaat moet altijd helder, 
+            bruikbaar en toekomstbestendig zijn.
+          </p>
         </div>
       </section>
 
-      {/* AI Werkwijze (V2 Kernonderdeel) */}
-      <HighlightSection title="AI & Mijn Werkwijze">
-        <div className="prose prose-lg text-portfolio-text/80 space-y-8 max-w-none">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-portfolio-text">AI als Denkpartner</h3>
-              <p>
-                In mijn workflow is AI een krachtig hulpmiddel voor brainstormen, onderzoek 
-                en het structureren van documentatie. Het helpt me om sneller van 
-                een 'leeg blad' naar een eerste concept te gaan.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-portfolio-text">Leren boven 'Vibe Coding'</h3>
-              <p>
-                Ik gebruik AI niet om blinde code te genereren, maar om nieuwe technieken 
-                sneller te doorgronden. Begrijpen komt bij mij altijd vóór implementeren. 
-                AI is de katalysator voor mijn eigen leerproces.
-              </p>
-            </div>
-          </div>
-          
-          <div className="bg-white/50 p-8 rounded-lg border border-portfolio-accent/20">
-            <h4 className="font-bold mb-4 text-portfolio-accent uppercase tracking-widest text-sm">Menselijke Expertise</h4>
-            <p className="italic">
-              "AI ondersteunt beslissingen, maar ik neem ze. De analytische blik en de 
-              verantwoordelijkheid voor de kwaliteit blijven 100% menselijk."
-            </p>
-          </div>
+      {/* Vandaag */}
+      <section className="bg-portfolio-text text-white py-20 md:py-32">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-sm font-bold uppercase tracking-widest text-portfolio-accent mb-4">Vandaag</h2>
+          <p className="text-3xl font-bold mb-6">Functioneel Analist bij Konato / Cronos</p>
+          <p className="text-xl text-white/60 max-w-2xl mx-auto">
+            Focus op analyse, samenwerking en continue ontwikkeling binnen uitdagende digitale ecosystemen.
+          </p>
         </div>
-      </HighlightSection>
+      </section>
 
       {/* Buiten IT */}
-      <section className="container mx-auto px-4 py-20 md:py-32">
-        <div className="max-w-3xl">
+      <section className="container mx-auto px-4 py-20 md:py-32 flex justify-center">
+        <div className="max-w-3xl text-center">
           <h2 className="text-3xl font-bold mb-8 text-portfolio-text">Buiten IT</h2>
           <p className="text-lg text-portfolio-text/70 leading-relaxed mb-8">
             Naast mijn passie voor analyse en technologie haal ik energie uit creativiteit, 

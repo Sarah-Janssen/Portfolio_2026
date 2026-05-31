@@ -12,8 +12,8 @@ const Contact: React.FC = () => {
         description="Neem contact op met Sarah Janssen voor vragen of samenwerkingen."
       />
 
-      <section className="container mx-auto px-4 py-20 md:py-32">
-        <div className="max-w-3xl">
+      <section className="container mx-auto px-4 py-20 md:py-32 flex justify-center animate-fade-in">
+        <div className="max-w-3xl w-full">
           <SectionHeading
             title="Contact"
             level="h1"

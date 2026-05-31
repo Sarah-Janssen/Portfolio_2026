@@ -7,6 +7,7 @@ export const projects: Project[] = [
     shortDescription:
       "Privacy-first MVP die ongestructureerde gedachten omzet naar rustige categorieën met lokale AI-ondersteuning.",
     category: "AI & Automatisatie",
+    filterCategory: "Project",
     challenge:
       "Mensen ervaren vaak mentale ruis doordat taken, zorgen, vragen en ideeën door elkaar lopen. Wanneer alles door elkaar loopt, wordt het moeilijk om te bepalen wat belangrijk is.",
     approach:
@@ -104,6 +105,7 @@ export const projects: Project[] = [
     title: "Water Data Platform",
     shortDescription: "Tijdens mijn Erasmusstage in Beja (Portugal) werkte ik mee aan de ontwikkeling van een watermonitoringplatform.",
     category: "Software & Applicaties",
+    filterCategory: "Leerervaring",
     challenge: "De organisatie beschikte over verschillende watergerelateerde gegevens, maar had nood aan een centrale oplossing om deze informatie overzichtelijk te raadplegen en te analyseren. De uitdaging lag in het vertalen van gebruikersbehoeften naar een bruikbare toepassing.",
     approach: "Ik startte met het analyseren van bestaande processen en gebruikersfeedback. Op basis daarvan werkte ik functionele flows uit en vertaalde ik de informatie naar een gestructureerd datamodel en een gebruiksvriendelijke applicatie met een iteratief ontwikkelproces.",
     solution: "Het resultaat was een webplatform waarmee watergegevens konden worden opgehaald, verwerkt en gevisualiseerd via interactieve dashboards, waardoor gebruikers sneller inzicht kregen.",
@@ -154,6 +156,7 @@ export const projects: Project[] = [
     title: "Meetup: RoboCup Eindhoven",
     shortDescription: "Een inspirerende verkenning van de nieuwste ontwikkelingen op het vlak van robotica en artificiële intelligentie.",
     category: "Leertraject",
+    filterCategory: "Meetup",
     challenge: "Het belang van continu bijleren buiten de dagelijkse werkomgeving en het begrijpen van hoe complexe systemen zoals robotica in de praktijk functioneren.",
     approach: "Observatie van autonome robots tijdens voetbalwedstrijden gecombineerd met theoretische verdieping tijdens een AI-talk van Lieven Scheire over impact en ethiek.",
     solution: "Een versterkt inzicht in de synergie tussen software, hardware en AI, en een hernieuwde motivatie om innovatieve technologieën vanuit zowel technisch als maatschappelijk oogpunt te benaderen.",
@@ -193,7 +196,7 @@ export const projects: Project[] = [
       "Innovatiemanagement",
       "Ethische AI"
     ],
-    footerTitle: "Belangrijke inzichten",
+    footerTitle: "Inzichten",
     customDetails: [
       {
         title: "Mijn focus",
@@ -238,7 +241,33 @@ export const projects: Project[] = [
       "AI",
       "Continu Leren"
     ],
-    images: [],
+    images: [
+      {
+        url: "/images/projects/robocup-eindhoven/robocup-1.jpg",
+        caption: "Robocup 2024",
+        type: "photo"
+      },
+      {
+        url: "/images/projects/robocup-eindhoven/robocup-2.jpg",
+        caption: "Robocup 2024",
+        type: "photo"
+      },
+      {
+        url: "/images/projects/robocup-eindhoven/robocup-3.jpg",
+        caption: "Robocup 2024",
+        type: "photo"
+      },
+      {
+        url: "/images/projects/robocup-eindhoven/robocup-video-1.mp4",
+        caption: "Robocup 2024",
+        type: "video"
+      },
+      {
+        url: "/images/projects/robocup-eindhoven/robocup-video-2.mp4",
+        caption: "Robocup 2024",
+        type: "video"
+      }
+    ],
     audience: "both"
   }
 ]

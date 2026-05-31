@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="group bg-white border border-portfolio-accent/10 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md hover:border-portfolio-accent/30">
+    <div className="group bg-white border border-portfolio-accent/10 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md hover:border-portfolio-accent/30 animate-slide-up">
       <div className="p-6">
         <div className="flex flex-wrap gap-2 mb-4">
           <Tag variant="tan">{project.category}</Tag>

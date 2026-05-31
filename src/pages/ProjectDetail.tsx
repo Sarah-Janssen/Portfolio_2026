@@ -24,7 +24,7 @@ const ProjectDetail: React.FC = () => {
       />
       
       {/* 1. Hero / Intro */}
-      <section className="container mx-auto px-4 pt-20 pb-12 flex justify-center">
+      <section className="container mx-auto px-4 pt-20 pb-12 flex justify-center animate-fade-in">
         <div className="max-w-4xl w-full">
           <Link to="/projects" className="text-portfolio-accent text-sm font-medium mb-8 inline-flex items-center hover:underline">
             <svg className="w-4 h-4 mr-1 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -138,11 +138,11 @@ const ProjectDetail: React.FC = () => {
         </HighlightSection>
       )}
 
-      {/* 6. Subtiele Technische Details (Onderaan) */}
+      {/* 6. Subtiele Technische Details / Inzichten (Onderaan) */}
       <section className="container mx-auto px-4 py-20 border-t border-portfolio-accent/10 flex justify-center bg-portfolio-bg">
         <div className="max-w-4xl w-full">
           <h2 className="text-sm font-bold uppercase tracking-widest text-portfolio-accent/60 mb-12 text-center">
-            {project.footerTitle || "Technische details"}
+            {project.filterCategory === 'Meetup' ? "Belangrijkste Inzichten" : "Technische details"}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-sm">
             {project.customDetails ? (

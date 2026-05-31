@@ -13,10 +13,12 @@ export type ProjectCategory =
   | "AI & Automatisatie"
   | "Leertraject"
 
+export type ProjectFilterCategory = "Project" | "Leerervaring" | "Meetup"
+
 export interface ProjectImage {
   url: string
   caption: string
-  type: 'screenshot' | 'wireframe' | 'diagram' | 'mock-up' | 'photo'
+  type: 'screenshot' | 'wireframe' | 'diagram' | 'mock-up' | 'photo' | 'video'
 }
 
 export interface StorySection {
@@ -33,20 +35,21 @@ export interface Project {
   slug: string
   title: string
   shortDescription: string
-  category: ProjectCategory // V2: Verplicht veld
-  challenge: string         // V2: Focus op probleem
-  approach: string          // V2: Focus op werkwijze
-  solution: string          // V2: Focus op resultaat (vervangt 'result')
-  storySections?: StorySection[] // V2.3: Custom storytelling sections
-  learnings: string         // V2: Focus op groei
+  category: ProjectCategory
+  filterCategory: ProjectFilterCategory // V2.4: Verplicht voor filtering
+  challenge?: string         // Optioneel als storySections gebruikt worden
+  approach?: string          // Optioneel als storySections gebruikt worden
+  solution?: string          // Optioneel als storySections gebruikt worden
+  storySections?: StorySection[] 
+  learnings: string         
   role: string[]
   skills: string[]
   stack: string[]
-  footerTitle?: string      // V2.3: Custom titel voor de onderste sectie
-  customDetails?: CustomDetailSection[] // V2.3: Custom datakolommen
+  footerTitle?: string      
+  customDetails?: CustomDetailSection[] 
   featured: boolean
-  images?: ProjectImage[]   // V2: Visuals
-  highlights?: string[]     // V2: Wat dit project toont
+  images?: ProjectImage[]   
+  highlights?: string[]     
   audience?: ProjectAudience
   type?: ProjectType
   themes?: string[]
