@@ -38,9 +38,11 @@ const Home: React.FC = () => {
             </div>
           </div>
           <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-portfolio-accent/10 border-4 border-white shadow-lg overflow-hidden order-1 md:order-2 flex-shrink-0">
-            <div className="w-full h-full flex items-center justify-center text-portfolio-accent/40 font-bold italic text-center px-4">
-              Profielfoto
-            </div>
+            <img 
+              src="/images/profielfoto.jpg" 
+              alt="Sarah Janssen" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -86,27 +88,62 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. Uitgelichte projecten */}
+      {/* 4. Hoe ik AI inzet */}
       <section className="container mx-auto px-4 py-20 md:py-32 animate-slide-up">
-        <SectionHeading 
-          title="Uitgelichte projecten" 
-          subtitle="Een selectie van oplossingen die mijn manier van werken illustreren."
-          centered
-        />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {featuredProjects.map(project => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <SectionHeading 
+            title="Hoe ik AI inzet" 
+            subtitle="Geen doel op zich, maar een hulpmiddel om sneller inzichten te verkrijgen, ideeën te structureren en oplossingen te verkennen."
+            centered
+          />
+          <p className="text-lg text-portfolio-text/70 leading-relaxed">
+            Ik gebruik AI kritisch en doelgericht als ondersteuning bij analyse, documentatie, onderzoek en prototyping. 
+            Begrijpen komt voor mij altijd vóór implementeren.
+          </p>
         </div>
-        <div className="mt-16 text-center">
-          <Button to="/projects" variant="outline">Bekijk alle projecten & ervaringen</Button>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <InterestCard 
+            title="Analyse" 
+            description="Complexe informatie verwerken en verbanden ontdekken."
+          />
+          <InterestCard 
+            title="Structuur Creëren" 
+            description="Ideeën, documentatie en processen helder uitwerken."
+          />
+          <InterestCard 
+            title="Onderzoeken" 
+            description="Alternatieven verkennen en hypotheses toetsen."
+          />
+          <InterestCard 
+            title="Prototypen" 
+            description="Concepten sneller visualiseren en valideren."
+          />
         </div>
       </section>
 
-      {/* 5. Contact CTA */}
+      {/* 5. Uitgelichte projecten */}
+      <section className="bg-portfolio-accent/5 py-20 md:py-32 animate-slide-up">
+        <div className="container mx-auto px-4">
+          <SectionHeading 
+            title="Uitgelichte projecten" 
+            subtitle="Een selectie van oplossingen die mijn manier van werken illustreren."
+            centered
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {featuredProjects.map(project => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+          <div className="mt-16 text-center">
+            <Button to="/projects" variant="outline">Bekijk alle projecten & ervaringen</Button>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Contact CTA */}
       <section className="bg-portfolio-text text-white py-20 md:py-32 text-center animate-fade-in">
         <div className="container mx-auto px-4 max-w-2xl">
-          <h2 className="text-3xl font-bold mb-6">Klaar om iets te bouwen of te structureren?</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">Klaar om iets te bouwen of te structureren?</h2>
           <p className="text-lg text-white/60 mb-10 leading-relaxed">
             Of je nu een werkgever bent, een partner, of een uitdagend project hebt: 
             mijn deur staat open voor analytische vraagstukken.

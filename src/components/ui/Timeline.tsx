@@ -17,33 +17,35 @@ const items: TimelineItem[] = [
   {
     period: 'Vroegere Ervaring',
     title: 'Retail & Organisatie',
-    subtitle: '2009 – 2022',
+    subtitle: '2009 – 2016',
     description: 'Focus op klantgericht werken, verantwoordelijkheid en procesmatig organiseren.',
   },
   {
     period: 'Structuur',
     title: 'Medische Administratie',
-    subtitle: '2009 – 2022',
+    subtitle: '2016 – 2022',
     description: 'Ervaring opbouwen in een strikt gestructureerde en nauwkeurige omgeving.',
   },
   {
-    period: 'De Switch',
-    title: 'Omscholing naar IT',
-    subtitle: '2023 – 2025',
-    description: 'De bewuste keuze om mijn analytische vaardigheden technisch te onderbouwen.',
+    period: 'Opleiding',
+    title: 'Graduaat Programmeren',
+    subtitle: '2023 – 2025 · Thomas More Hogeschool',
+    description: 'De bewuste keuze om mijn analytische vaardigheden technisch te onderbouwen met een focus op softwareontwikkeling, databases en analyse.',
+    tags: ['Python', 'TypeScript', 'SQL', 'Docker', 'Git']
   },
   {
     period: 'Portugal (Erasmus)',
     title: 'Water Data Platform',
-    subtitle: '2025',
+    subtitle: '2025 · IPBeja',
     description: 'Mijn eerste grote IT-project: Django, PostgreSQL en Grafana in een internationale setting.',
-    tags: ['Django', 'PostgreSQL', 'Docker', 'Grafana']
+    tags: ['Django', 'PostgreSQL', 'Grafana']
   },
   {
     period: 'Heden',
     title: 'ICT-Consultant / Functioneel Analist',
-    subtitle: '2026 – heden',
-    description: 'Eerste professionele IT-rol waarin analyse, samenwerking en continue groei samenkomen.',
+    subtitle: '2026 – heden · Konato NV',
+    description: 'Eerste professionele IT-rol waarin analyse, samenwerking en continue groei samenkomen binnen digitale ecosystemen.',
+    tags: ['Jira', 'Confluence', 'Postman']
   }
 ];
 
@@ -51,7 +53,7 @@ const Timeline: React.FC = () => {
   return (
     <div className="relative border-l border-portfolio-accent/20 ml-4 md:ml-0 md:pl-0">
       {items.map((item, index) => (
-        <div key={index} className="mb-12 ml-6 relative">
+        <div key={index} className="mb-12 ml-6 relative animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
           <div className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-portfolio-accent border-4 border-portfolio-bg shadow-sm" />
           <span className="text-xs font-bold uppercase tracking-widest text-portfolio-accent/60 mb-1 block">
             {item.period}

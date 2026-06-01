@@ -36,9 +36,9 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* 2. De Tijdlijn (Mijn Reis) */}
+      {/* 2. De Tijdlijn (Mijn Reis & Profiel Geconsolideerd) */}
       <section className="bg-portfolio-accent/5 py-20 md:py-32 flex justify-center border-t border-portfolio-accent/10">
-        <div className="max-w-5xl w-full">
+        <div className="max-w-5xl w-full px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             <div className="md:col-span-1">
               <SectionHeading 
@@ -49,58 +49,14 @@ const About: React.FC = () => {
             </div>
             <div className="md:col-span-2">
               <Timeline />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Professioneel Profiel (Nu weer met Huidige Ervaring) */}
-      <section className="container mx-auto px-4 py-20 md:py-32 flex justify-center border-t border-portfolio-accent/10">
-        <div className="max-w-5xl w-full px-4 animate-slide-up">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-            <div className="md:col-span-1">
-              <SectionHeading 
-                title="Profiel" 
-                subtitle="Ervaring, opleiding en technisch fundament."
-              />
-            </div>
-            <div className="md:col-span-2 space-y-12">
-              <div className="space-y-10">
-                <div>
-                  <h3 className="text-sm font-bold uppercase tracking-widest text-portfolio-accent mb-2 border-b border-portfolio-accent/10 pb-1 inline-block">Huidige ervaring</h3>
-                  <div className="space-y-8 mt-6">
-                    <div>
-                      <p className="text-lg font-bold text-portfolio-text">ICT-Consultant / Functioneel Analist</p>
-                      <p className="text-sm font-bold text-portfolio-accent mb-2">Konato NV • Januari 2026 – heden</p>
-                      <p className="text-portfolio-text/70 leading-relaxed">
-                        Focus op analyse, samenwerking en continue ontwikkeling binnen uitdagende digitale ecosystemen.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-4">
-                  <div>
-                    <h3 className="text-xs font-bold uppercase tracking-widest text-portfolio-accent mb-4">Opleiding</h3>
-                    <p className="font-bold text-sm">Graduaat Programmeren</p>
-                    <p className="text-xs text-portfolio-text/60">Thomas More Hogeschool · 2023-2025</p>
-                  </div>
-                  <div>
-                    <h3 className="text-xs font-bold uppercase tracking-widest text-portfolio-accent mb-4">Technologieën</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {["Jira", "Confluence", "Postman", "Python", "TypeScript", "SQL", "Docker", "Git"].map(tech => (
-                        <span key={tech} className="text-[10px] bg-portfolio-accent/5 text-portfolio-accent px-2 py-1 rounded border border-portfolio-accent/10 font-medium">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-4">
+              
+              {/* Subtle CV Download Call-to-Action under the timeline */}
+              <div className="mt-16 pt-8 border-t border-portfolio-accent/10 animate-fade-in">
+                <p className="text-sm text-portfolio-text/60 mb-6 italic">
+                  Op zoek naar een meer traditioneel overzicht? 
+                </p>
                 <Button href="/documents/cv-sarah-janssen.pdf" variant="outline" className="text-xs py-2 px-4">
-                  Download CV (PDF)
+                  Download volledige CV (PDF)
                 </Button>
               </div>
             </div>
@@ -108,7 +64,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. Wat mij motiveert (Weer terug in de zwarte sectie) */}
+      {/* 3. Wat mij motiveert */}
       <section className="bg-portfolio-text text-white py-20 md:py-32 flex justify-center">
         <div className="max-w-4xl text-center px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Wat mij motiveert</h2>
@@ -121,7 +77,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. Buiten IT */}
+      {/* 4. Buiten IT */}
       <section className="container mx-auto px-4 py-20 md:py-32 flex justify-center border-t border-portfolio-accent/10">
         <div className="max-w-3xl text-center">
           <h2 className="text-3xl font-bold mb-8 text-portfolio-text">Buiten IT</h2>
